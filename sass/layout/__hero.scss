@@ -1,0 +1,221 @@
+/********** Hero **********/
+.hero {
+  padding: 6.3rem 0;
+  position: relative;
+  // .hero__container
+
+  &__container {
+    @include flex;
+    justify-content: space-between;
+    @include device(mobile) {
+      flex-direction: column;
+      gap: 4.6rem;
+      justify-content: center;
+    }
+  }
+  // .hero__title
+
+  &__title {
+    width: 100%;
+    max-width: 457px;
+    @include device(tablet) {
+      max-width: 326px;
+      font-size: $h2-fontSize;
+    }
+  }
+
+  // .hero__desc
+
+  &__desc {
+    width: 100%;
+    max-width: 445px;
+    margin-top: 2.9rem;
+    @include device(tablet) {
+      max-width: 398px;
+      font-size: $bodyFontSizeMd;
+    }
+  }
+
+  // .hero__btn
+
+  &__btn {
+    background: $primaryGradient;
+    margin-top: 2.9rem;
+  }
+
+  &__btn:hover {
+    background: $primaryBtnHoverColor;
+  }
+
+  // .hero__ellipse
+
+  &__ellipse {
+    width: 317px;
+    height: 560px;
+    border-radius: 15.8rem;
+    background: url(../../image/Human.png), $primaryGradient;
+    background-repeat: no-repeat;
+    background-size: 325px 480px, cover;
+    background-position: bottom center, 100%;
+    position: relative;
+    @include device(tablet) {
+      width: 217px;
+      height: 383px;
+      background-size: 238px 360px, cover;
+    }
+    @include device(mobile) {
+      width: 253px;
+      height: 253px;
+      background-size: contain, cover;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: " ";
+      width: 317px;
+      height: 1008px;
+      border-radius: 15.8rem;
+      background: $secondaryGradient;
+      position: absolute;
+      right: -244px;
+      top: -347px;
+      transform: rotate(45deg);
+      z-index: -1;
+      @include device(tablet) {
+        width: 216px;
+        height: 688px;
+        right: -166px;
+        top: -237px;
+      }
+      @include device(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__ractangle {
+    max-width: 199px;
+    min-width: 155px;
+    background: $whiteColor;
+    padding: 2rem 2.4rem;
+    border-radius: 15px;
+    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    position: absolute;
+    @include device(tablet) {
+      max-width: 199px;
+      min-width: 105px;
+    }
+  }
+
+  &__ractangle-title {
+    @include device(tablet) {
+      font-size: $h3-fontSize;
+    }
+  }
+
+  &__ractangle-desc {
+    @include device(tablet) {
+      font-size: $bodyFontSizeSm;
+    }
+  }
+
+  &__ractangle:first-child {
+    top: 117px;
+    right: -110px;
+    @include device(tablet) {
+      top: 0;
+      right: -46px;
+    }
+  }
+
+  &__ractangle:last-child {
+    bottom: 0;
+    left: -55px;
+  }
+}
+
+/********** Grid **********/
+.grid {
+  padding: 6.3rem 0;
+
+  // .grid__parent
+
+  &__parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-items: center center;
+    place-content: center center;
+    column-gap: 3rem;
+    row-gap: 7.6rem;
+  }
+}
+
+#childOne {
+  background: $primaryGradient;
+  .card__title {
+    color: $whiteColor;
+  }
+
+  @include device(mobile) {
+    min-height: 120px;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 320px;
+  border-radius: 15px;
+  padding: 3.6rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  // card__ellipse
+
+  &__ellipse {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: $primaryGradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -30px;
+    left: 32px;
+  }
+
+  // .card__title
+
+  &__title {
+    width: 100%;
+    max-width: 286px;
+    min-width: 81px;
+  }
+
+  // .card__desc
+
+  &__desc {
+    width: 100%;
+    max-width: 286px;
+    margin-top: 2.8rem;
+  }
+
+  // .card__link
+
+  &__link {
+    @include font($bodyWeightBold, $bodyFontSizeLg, $bodyLineLg, $linkColor);
+    margin-top: auto;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__link:hover {
+    color: $linkHoverColor;
+  }
+}
+
+.card:not(:first-child) {
+  background-color: $whiteColor;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+}

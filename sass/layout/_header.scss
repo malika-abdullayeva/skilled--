@@ -1,0 +1,29 @@
+.header {
+  padding: 2.4rem 0;
+  z-index: 1;
+  @include device(mobile) {
+    padding: 2rem 0;
+  }
+
+  // .header__container
+
+  &__container {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__btn:hover {
+    background: $btnHoverColor;
+  }
+}
+.brand {
+
+  // .brand__img
+
+  &__img {
+    @include device(mobile) {
+      width: 100%;
+      max-width: 89px;
+    }
+  }
+}

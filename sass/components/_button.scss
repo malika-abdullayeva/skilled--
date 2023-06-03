@@ -1,0 +1,19 @@
+.btn {
+  width: 100%;
+  max-width: 167px;
+  padding: 1.4rem 3.1rem;
+  background: #13183F;
+  border-radius: 28px;
+  @include font($bodyWeightBold, $bodyFontSizeLg, $bodyLineLg, $whiteColor);
+  transition: all 0.2s ease-in-out;
+  @include device(mobile) {
+    max-width: 140px;
+    font-size: $bodyFontSizeMd;
+    padding: 1.4rem 2.4rem;
+  }
+}
+
+.footer__btn {
+  background: $secondaryGradient;
+  transition: all 0.2s ease-in-out;
+}

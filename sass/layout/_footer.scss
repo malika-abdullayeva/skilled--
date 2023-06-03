@@ -1,0 +1,14 @@
+.footer {
+  padding: 2.4rem 0;
+  background-color: $secondaryColor;
+  // .footer__container
+
+  &__container {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__btn:hover {
+    background: $secondaryBtnHoverColor;
+  }
+}

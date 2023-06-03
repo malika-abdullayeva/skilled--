@@ -1,0 +1,40 @@
+/********** Html **********/
+$htmlFontSize: 62.5%;
+
+/********** Body **********/
+$bodyFontFamily: 'Plus Jakarta Sans', sans-serif;
+$bodyWeightMedium: 500;
+$bodyFontSizeLg: 1.8rem;
+$bodyLineLg: 1.56;
+
+$bodyWeightBold: 700;
+$bodyFontSizeMd: 1.6rem;
+$bodyFontSizeSm: 1.4rem;
+$bodyLineMd: 1.75;
+
+$fontWeightHeadeings: 800;
+
+/********** Colors **********/
+$primaryColor: #83869A;
+$secondaryColor: #13183F;
+$btnHoverColor: #666CA3;
+$linkColor: #F74780;
+$linkHoverColor: #FFA7C3;
+$whiteColor: #FFFFFF;
+$primaryGradient: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+$primaryBtnHoverColor: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+$secondaryGradient: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+$secondaryBtnHoverColor: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+
+/********** Typography **********/
+$h1-fontSize: 5.6rem;
+$h1-line: 1.28;
+
+$h2-fontSize: 4rem;
+$h2-line: 1.27;
+
+$h3-fontSize: 3.2rem;
+$h3-line: 1.25;
+
+$h4-fontSize: 2.4rem;
+$h4-line: 1.26;
